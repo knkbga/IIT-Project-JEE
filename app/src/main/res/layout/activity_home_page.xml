@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@android:style/Theme.Holo.Light"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="homePage.homePage">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/linearLayout2">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorPrimary"
+            android:elevation="6dp"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.design.widget.TabLayout
+            app:tabIndicatorColor="#ffff"
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:elevation="6dp"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:layout_below="@+id/toolbar"
+            android:layout_alignParentStart="true" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/tab_layout"/>
+
+        <Button
+            android:textColor="#ffff"
+            android:background="@color/colorPrimary"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Start Test"
+            android:id="@+id/startTest"
+            android:layout_alignTop="@+id/pager"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="68dp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:background="#000000"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_weight="0.1"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+            <ImageButton
+                android:id="@+id/button_test"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@null"
+                android:scaleType="fitXY">
+            </ImageButton>
+
+            <TextView
+                android:textAlignment="center"
+                android:paddingBottom="2sp"
+                android:textSize="10sp"
+                android:textColor="#ffff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:clickable="false"
+                android:text="Learn" >
+            </TextView>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_weight="0.1"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+            <ImageButton
+                android:id="@+id/button_practice"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@null"
+                android:scaleType="fitXY">
+            </ImageButton>
+
+            <TextView
+                android:textAlignment="center"
+                android:paddingBottom="2sp"
+                android:textSize="10sp"
+                android:textColor="#ffff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:clickable="false"
+                android:text="Practice" >
+            </TextView>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_weight="0.1"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+            <ImageButton
+                android:id="@+id/button_tests"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@null"
+                android:scaleType="fitXY">
+            </ImageButton>
+
+            <TextView
+                android:textAlignment="center"
+                android:paddingBottom="2sp"
+                android:textSize="10sp"
+                android:textColor="#ffff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:clickable="false"
+                android:text="Tests" >
+            </TextView>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_weight="0.1"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+            <ImageButton
+                android:id="@+id/button_friends"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@null"
+                android:scaleType="fitXY">
+            </ImageButton>
+
+            <TextView
+                android:textAlignment="center"
+                android:paddingBottom="2sp"
+                android:textSize="10sp"
+                android:textColor="#ffff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:clickable="false"
+                android:text="Friends" >
+            </TextView>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_weight="0.1"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+            <ImageButton
+                android:id="@+id/button_profile"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@null"
+                android:scaleType="fitXY">
+            </ImageButton>
+
+            <TextView
+                android:textAlignment="center"
+                android:paddingBottom="2sp"
+                android:textSize="10sp"
+                android:textColor="#ffff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:clickable="false"
+                android:text="Profile" >
+            </TextView>
+        </FrameLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

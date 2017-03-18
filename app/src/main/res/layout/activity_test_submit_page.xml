@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#ffff"
+    tools:context="com.example.nitin.myapp.TestSubmitPage">
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/RelativeLayoutDisplayMarks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/MarksObtained"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:text="You Obtained ::"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+    android:id="@+id/RelativeLayoutSubmitPopUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <Button
+        android:layout_marginTop="20dp"
+        android:textColor="#ffff"
+        android:padding="10dp"
+        android:background="#13e613"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SUBMIT"
+        android:id="@+id/SubmitButton"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:textColor="#000000"
+        android:padding="5dp"
+        android:textAlignment="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Click this button to submit the test."
+        android:id="@+id/captionForSubmitButton"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/SubmitButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true" />
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/captionForSubmitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout">
+
+        <Button
+            android:layout_marginRight="5dp"
+            android:layout_weight="0.1"
+            android:textColor="#ffff"
+            android:padding="10dp"
+            android:background="#ffa500"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Attempt"
+            android:id="@+id/AttemptButton"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
+        <Button
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0.1"
+            android:textColor="#ffff"
+            android:padding="10dp"
+            android:background="#ffa500"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Review"
+            android:id="@+id/ReviewButton"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:textAlignment="center"
+            android:padding="5dp"
+            android:textColor="#000000"
+            android:layout_weight="0.1"
+            android:text="Click to attempt the unattempted questions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textAlignment="center"
+            android:padding="5dp"
+            android:textColor="#000000"
+            android:layout_weight="0.1"
+            android:text="Click to review through all the questions."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/RelativeLayoutSubmitLoading"
+        android:textAlignment="center"
+        android:layout_below="@+id/RelativeLayoutSubmitPopUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/submitClickLoading"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_below="@+id/submitClickLoading"
+            android:textSize="30dp"
+            android:textColor="@color/colorPrimary"
+            android:padding="10dp"
+            android:text="Loading..."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+</RelativeLayout>
